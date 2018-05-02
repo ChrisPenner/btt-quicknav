@@ -1,12 +1,7 @@
 import linkCommand from './web-link-command'
+import projects from '../projects'
 
-const options = [
-    ['digital-ads-client', 'frontend'],
-
-    [ 'advertising', 'backend'],
-    [ 'advertising-accounts', 'backend'],
-    [ 'adwords-service', 'backend'],
-].map(([name, type]) => ({
+const options = projects.map(({ name, type }) => ({
     label: name,
     value: `https://mission-control-prod.vendasta-internal.com/${type}/${name}`,
 }))

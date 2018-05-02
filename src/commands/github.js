@@ -1,11 +1,13 @@
 import linkCommand from './web-link-command'
+import projects from '../projects'
+
+const options = projects.map(({name}) => ({
+    label: name,
+    value: `https://github.com/vendasta/${name}`,
+}))
 
 export default linkCommand({
     title: 'Github',
-    options: [
-        {label: 'advertising', value: 'https://github.com/vendasta/advertising'},
-        {label: 'advertising-accounts', value: 'https://github.com/vendasta/advertising-accounts'},
-        {label: 'adwords-service', value: 'https://github.com/vendasta/adwords-service'},
-    ],
+    options: options,
 })
 

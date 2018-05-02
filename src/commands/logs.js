@@ -1,15 +1,12 @@
 import linkCommand from './web-link-command'
+import projects from '../projects'
 
-const projects = [
-    'advertising',
-    'advertising-accounts',
-    'adwords-service',
-]
+const backendProjects = projects.filter(({type}) => type === 'backend');
 
-const projectNames = [].concat(...projects.map(project => [
-    `${project}-test`,
-    `${project}-demo`,
-    `${project}-prod`,
+const projectNames = [].concat(...backendProjects.map(({name}) => [
+    `${name}-test`,
+    `${name}-demo`,
+    `${name}-prod`,
 ]));
 
 const options = projectNames.map(project => ({
