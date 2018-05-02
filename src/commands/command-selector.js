@@ -3,6 +3,7 @@ import datadog from './datadog'
 import logs from './logs'
 import missionControl from './mission-control'
 import cloudBuilder from './cloud-builder'
+import slack from './slack'
 
 export default callback => ({
     title: 'Select Action',
@@ -14,7 +15,14 @@ export default callback => ({
         {label: 'cloud-builder', value: cloudBuilder},
         // {label: 'project', value: 'project'},
         // {label: 'pivotal', value: 'pivotal'},
+        {label: 'slack', value: slack},
     ],
-    onSelect: ({value}) => callback(value)
+    onSelect: ({value}) => {
+        if(typeof value === 'function') {
+            value().then(command => callback(command))
+        } else {
+            callback(value)
+        }
+    }
 })
 
