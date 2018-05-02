@@ -1,9 +1,13 @@
 import linkCommand from './web-link-command'
-import projects from '../projects'
 import {slackTeamID, slackToken} from '../secrets.js'
 
-export default () =>
-    fetch(`https://slack.com/api/channels.list?exclude_members=true&exclude_archived=true&token=${slackToken}`)
+let cache = null;
+
+export default () => {
+    if (cache) {
+        return cache;
+    }
+    cache = fetch(`https://slack.com/api/channels.list?exclude_members=true&exclude_archived=true&token=${slackToken}`)
     .then(resp => resp.json())
     .then(({channels}) => {
         const options = channels.map(({name, id}) => ({
@@ -15,3 +19,5 @@ export default () =>
             options: options,
         })
     })
+    return cache;
+}
