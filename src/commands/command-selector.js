@@ -6,6 +6,7 @@ import cloudBuilder from './cloud-builder'
 import slack from './slack'
 import pivotal from './pivotal'
 import project from './project'
+import launcher from './launcher'
 
 export default callback => ({
     title: 'Select Action',
@@ -15,9 +16,10 @@ export default callback => ({
         {label: 'logs', value: logs},
         {label: 'mission control', value: missionControl},
         {label: 'cloud-builder', value: cloudBuilder},
-        {label: 'project', value: project},
         {label: 'pivotal', value: pivotal},
-        {label: 'slack', value: slack},
+        // {label: 'launcher', value: launcher},
+        // {label: 'project', value: project},
+        // {label: 'slack', value: slack},
     ],
     onSelect: ({value}) => {
         if(typeof value === 'function') {
