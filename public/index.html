@@ -13,8 +13,12 @@
     <script>
     function BTTInitialize() {
         setTimeout(() => {
-            console.log(window.select)
-            window.select.focus();
+            if(window.select){
+                window.select.focus();
+            }
+            if(window.reset) {
+                window.reset();
+            }
         }, 0);
     }
     </script>
