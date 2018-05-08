@@ -1,12 +1,12 @@
-import linkCommand from './web-link-command'
-import projects from '../projects.js'
+import bashCommand from './bash-command';
+import projects from '../projects.js';
 
-const options = projects.map(({ide, name}) => ({
+const options = projects.map(({ide, name, path}) => ({
     label: name,
-    value: `${ide}://open`
+    value: `/usr/local/bin/${ide} ${path}`,
 }))
 
-export default linkCommand({
+export default bashCommand({
     title: 'Project',
     options: options,
 })
