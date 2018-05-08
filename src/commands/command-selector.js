@@ -7,6 +7,7 @@ import slack from './slack'
 import pivotal from './pivotal'
 import launcher from './launcher'
 import project from './project'
+import session from './session'
 
 export default callback => ({
     title: 'Select Action',
@@ -20,6 +21,7 @@ export default callback => ({
         {label: 'launcher', value: launcher},
         {label: 'project', value: project},
         {label: 'slack', value: slack},
+        {label: 'session', value: session},
     ],
     onSelect: ({value}) => {
         if(typeof value === 'function') {
