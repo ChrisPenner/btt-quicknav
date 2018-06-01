@@ -8,6 +8,7 @@ import pivotal from './pivotal'
 import launcher from './launcher'
 import project from './project'
 import session from './session'
+import commands from '../command-config'
 
 export default callback => ({
     title: 'Select Action',

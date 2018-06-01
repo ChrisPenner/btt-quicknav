@@ -1,6 +1,6 @@
 import linkCommand from './web-link-command'
 import cachedCommand from './cached-command'
-import {pivotalProjectID} from '../projects'
+import {pivotalProjectID} from '../config'
 import {pivotalToken} from '../secrets'
 
 export default cachedCommand(() => {

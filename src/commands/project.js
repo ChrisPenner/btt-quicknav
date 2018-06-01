@@ -1,5 +1,5 @@
 import bashCommand from './bash-command';
-import projects from '../projects.js';
+import {projects} from '../config'
 
 const options = projects.map(({ide, name, path}) => ({
     label: name,

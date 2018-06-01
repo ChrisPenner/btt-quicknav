@@ -1,5 +1,5 @@
 import linkCommand from './web-link-command'
-import projects from '../projects'
+import {projects} from '../config'
 
 const options = projects.map(({name}) => ({
     label: name,

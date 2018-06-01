@@ -1,5 +1,5 @@
 import bashCommand from './bash-command';
-import sessions from '../sessions.js';
+import {sessions} from '../config';
 
 const options = sessions.map(({name, links}) => ({
     label: name,
