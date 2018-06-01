@@ -6,8 +6,28 @@ Better Touch Tool Quick-navigator
 - `git clone https://github.com/ChrisPenner/btt-quicknav.git`
 - `cd btt-quicknav`
 - `npm install`
-- `npm run build`
-- `cp example-secrets.json ./src/secrets.json` Here you can configure secrets/api tokens for services you use
-- Now edit `src/secrets.json` and add values for any services you might use
-- `cp example-projects.json ./src/projects.json` Here you can configure secrets/api tokens for services you use
-- Also edit `src/projects.json` to contain any information about projects you use.
+
+## Setup
+
+In order to use quick-nav you'll need to set it up with whatever commands or configuration you like.
+
+The config files are gitignored, but there are examples which you can use to get started:
+
+- `cp example-secrets.json ./src/secrets.json` 
+- Here you can configure secrets/api tokens for services you use
+- `cp example-config.json ./src/config.json` 
+- Here you can set up basic setting  which can be used by commands
+- `cp example-command-config.json ./src/command-config.json` 
+- Here you can configure which commands will be available or add your own commands
+
+
+## Running
+
+- `npm run build`: You'll need to set up your config files for this to succeed
+- Add a new html overlay on some keyboard shortcut inside BTT
+
+Basic settings:
+![basic settings](./images/settings-basic.png)
+
+Advanced settings:
+![advanced settings](./images/settings-advanced.png)
