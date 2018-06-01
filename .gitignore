@@ -22,3 +22,4 @@ yarn-error.log*
 
 # secrets
 /src/secrets.js
+/src/projects.js
