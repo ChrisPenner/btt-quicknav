@@ -1,6 +1,18 @@
 Better Touch Tool Quick-navigator
 =================================
 
+A quick navigator to automate your workflow;
+
+Currently has commands to help you:
+
+- Jump to bookmarks
+- Open browser sessions (or presets)
+- Open slack channels
+- Run bash commands
+- Run arbitrary Better Touch Tool commands
+
+![quicknav demo](./images/quicknav.gif)
+
 ## Installation
 
 - `git clone https://github.com/ChrisPenner/btt-quicknav.git`
