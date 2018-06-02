@@ -9,7 +9,6 @@ Currently has commands to help you:
 - Open browser sessions (or presets)
 - Open slack channels
 - Run bash commands
-- Run arbitrary Better Touch Tool commands
 
 ![quicknav demo](./images/quicknav.gif)
 
@@ -22,15 +21,7 @@ Currently has commands to help you:
 ## Setup
 
 In order to use quick-nav you'll need to set it up with whatever commands or configuration you like.
-
-The config files are gitignored, but there are examples which you can use to get started:
-
-- `cp example-secrets.json ./src/secrets.json` 
-- Here you can configure secrets/api tokens for services you use
-- `cp example-config.json ./src/config.json` 
-- Here you can set up basic setting  which can be used by commands
-- `cp example-command-config.json ./src/command-config.json` 
-- Here you can configure which commands will be available or add your own commands
+Edit `src/config.js` to configure any commands you like!
 
 
 ## Running
@@ -67,6 +58,8 @@ I've already written a few helpers; see `src/commands/web-link-command.js` for a
 `src/commands/bash-command.js` for a command which helps you run bash commands on your computer. Each of these expose a
 function which accepts an object with a `title` and `options` and build the appropriate command for you. Add each
 command to your `src/command-config.js` and then `npm run build` for your new commands to show up.
+
+See `config.js` for examples!
 
 ## Troubleshooting
 

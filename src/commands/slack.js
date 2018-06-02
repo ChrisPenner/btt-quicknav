@@ -1,9 +1,8 @@
 import linkCommand from './web-link-command'
 import cachedCommand from './cached-command'
-import {slackTeamID, slackToken} from '../secrets.js'
 
-export default cachedCommand(() => {
-    return fetch(`https://slack.com/api/channels.list?exclude_members=true&exclude_archived=true&token=${slackToken}`)
+export default ({slackTeamID, slackAPIToken}) => cachedCommand(() => {
+    return fetch(`https://slack.com/api/channels.list?exclude_members=true&exclude_archived=true&token=${slackAPIToken}`)
     .then(resp => resp.json())
     .then(({channels}) => {
         const options = channels.map(({name, id}) => ({

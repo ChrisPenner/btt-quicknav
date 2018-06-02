@@ -21,7 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # secrets
-secrets.js
-projects.js
-config.js
-command-config.js
+my-config.js

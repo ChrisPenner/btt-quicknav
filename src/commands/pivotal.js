@@ -1,13 +1,11 @@
 import linkCommand from './web-link-command'
 import cachedCommand from './cached-command'
-import {pivotalProjectID} from '../config'
-import {pivotalToken} from '../secrets'
 
-export default cachedCommand(() => {
+export default ({pivotalProjectID, pivotalAPIToken}) => cachedCommand(() => {
     return fetch(`https://www.pivotaltracker.com/services/v5/projects/${pivotalProjectID}/stories?filter=state%3Astarted`, {
         method: 'GET',
         headers: {
-            'X-TrackerToken': pivotalToken,
+            'X-TrackerToken': pivotalAPIToken,
         },
     })
     .then(resp => resp.json())

@@ -1,5 +1,3 @@
-import {bttSecret} from '../secrets.js'
-
 const bashCommand = {
     "BTTPredefinedActionType" : 137,
     "BTTPredefinedActionName" : "Execute Terminal Command (Async, non-blocking)",

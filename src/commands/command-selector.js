@@ -1,6 +1,4 @@
-import commands from '../command-config'
-
-export default callback => ({
+export default commands => callback => ({
     title: 'Select Action',
     options: commands,
     onSelect: ({value}) => {
