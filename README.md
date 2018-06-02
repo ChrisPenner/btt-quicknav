@@ -23,6 +23,10 @@ Currently has commands to help you:
 In order to use quick-nav you'll need to set it up with whatever commands or configuration you like.
 Edit `src/config.js` to configure any commands you like!
 
+\*\* NOTE \*\* the default `src/config.js` is configured to show off how
+certain commands work, but certain commands (e.g. pivotal, slack, project) won't work properly until you
+configure them for your computer, or set YOUR API tokens/IDs in place.
+
 
 ## Running
 
