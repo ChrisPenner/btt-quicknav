@@ -1,6 +1,8 @@
 Better Touch Tool Quick-navigator
 =================================
 
+**NOTE**: Requires latest alpha of [Better Touch Tool](https://folivora.ai/)
+
 A quick navigator to automate your workflow;
 
 Currently has commands to help you:
